@@ -99,7 +99,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         {isOpen && (
           <div
             className={`${
-              isOpen ? "dark:bg-slate-200" : ""
+              !isOpen ? "dark:bg-slate-200" : "dark:bg-transparent"
             } mt-10 absolute z-20 inset-0 bg-slate-700 md:static md:bg-transparent border-r-2 border-r-gray-800/60`}
           >
             <div className="px-4 flex flex-col sticky top-24">
