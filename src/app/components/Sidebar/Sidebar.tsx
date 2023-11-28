@@ -24,7 +24,9 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
   const [mowiesGenres, setMowiesGenres] = useState([]);
   const [isOpen, toggleMenu, showButton, setIsOpen] = useBurgerMenu(768);
   const [toggleChildren, setToggleChildren] = useState(true);
-  const isBreakpoint = window?.innerWidth <= 768;
+  // const isBreakpoint = window?.innerWidth <= 768;
+  const isBreakpoint =
+    typeof window !== "undefined" && window.innerWidth <= 768;
 
   const router = useRouter();
 
