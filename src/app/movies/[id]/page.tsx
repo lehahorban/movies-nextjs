@@ -6,7 +6,7 @@ export default async function Movie({ params }: { params: { id: string } }) {
   const data = await getTrandingsMoviesById(+params.id);
 
   return (
-    <div className="flex flex-col justify-center items-center p-5 h-screen">
+    <div className="flex flex-col md:justify-center items-center p-5">
       <div className="relative flex flex-col xl:flex-row rounded-md p-2 bg-slate-950/70">
         <Link
           className="absolute z-10 top-0.5 right-0.5 bg-red-500 w-4 h-4 rounded-full flex justify-center items-center group hover:bg-orange-500 transition-all duration-300"

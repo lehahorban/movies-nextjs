@@ -80,7 +80,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         currentData,
       }}
     >
-      <div className="main-wrapp pt-14 pb-4 flex-1 ">
+      <div className="main-wrapp pt-14 pb-4 flex-1">
         {showButton && (
           <button
             className="z-50 fixed right-3 top-4"
@@ -99,11 +99,11 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         {isOpen && (
           <div
             className={`${
-              !isOpen ? "dark:bg-slate-200" : "dark:bg-transparent"
-            } mt-10 absolute z-20 inset-0 bg-slate-700 md:static md:bg-transparent border-r-2 border-r-gray-800/60`}
+              isOpen ? "dark:bg-light-gradient dark:md:bg-none" : ""
+            } min-h-screen mt-[4.5rem] md:mt-10 absolute z-20 inset-0 bg-slate-700 md:static md:bg-transparent border-r-2 border-r-gray-800/60`}
           >
             <div className="px-4 flex flex-col sticky top-24">
-              <h2 className="text-4xl md:text-xl text-stone-800 font-bold text-shadow-3d">
+              <h2 className="text-xl md:text-xl text-stone-800 font-bold text-shadow-3d">
                 Discover
               </h2>
               <ul className="pl-5">
@@ -116,7 +116,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
                       setToggleChildren(true);
                       router.push("/");
                     }}
-                    className={` cursor-pointer text-3xl md:text-sm hover:!text-orange-600 text-shadow-halo transition-all duration-300  ${
+                    className={` cursor-pointer text-lg md:text-sm hover:!text-orange-600 text-shadow-halo transition-all duration-300  ${
                       isActive === title
                         ? "text-red-700 font-extrabold text-shadow-3d"
                         : "dark:text-slate-800 text-neutral-50 font-medium"
@@ -127,14 +127,14 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
                   </li>
                 ))}
               </ul>
-              <h2 className="text-4xl md:text-xl text-stone-800 font-bold text-shadow-3d ">
+              <h2 className="text-xl md:text-xl text-stone-800 font-bold text-shadow-3d ">
                 Genres
               </h2>
               <ul className="pl-5">
                 {mowiesGenres?.map(({ id, name }) => (
                   <li
                     key={id}
-                    className={` cursor-pointer text-3xl md:text-sm hover:!text-orange-600 text-shadow-halo transition-all duration-300 ${
+                    className={` cursor-pointer text-lg md:text-sm hover:!text-orange-600 text-shadow-halo transition-all duration-300 ${
                       genreId === id
                         ? "text-red-700 font-extrabold text-shadow-3d "
                         : "dark:text-slate-800 text-neutral-50  font-medium "
