@@ -21,11 +21,11 @@ body {
 
 @media (max-width: 768px) {
   .main-wrapp {
-    grid-template-columns: 1fr; /* Одна колонка при ширині екрану до 768px */
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 340px) {
   .hidden-toogle-theame {
     display: none;
   }
