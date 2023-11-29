@@ -14,8 +14,9 @@ export function useBurgerMenu(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
 
-  const isBreakpoint = windowWidth <= breakpoint;
-  const [showButton, setShowButton] = useState(isBreakpoint);
+  const [showButton, setShowButton] = useState(
+    typeof window !== "undefined" ? window.innerWidth <= breakpoint : false
+  );
   const [userOpened, setUserOpened] = useState(false);
 
   useEffect(() => {
