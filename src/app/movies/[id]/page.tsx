@@ -27,7 +27,7 @@ export default async function Movie({ params }: { params: { id: string } }) {
           <p className="text-teal-700 text-2xl font-bold">{data.title}</p>
           <p className="text-blue-200 text-lg font-medium">{data.overview}</p>
           <p className="text-white text-lg font-medium">{data.release_date}</p>
-          <ul className="flex gap-3">
+          <ul className="flex flex-wrap gap-3">
             {data.genres.map((item: any) => (
               <li
                 className="w-fit py-2 px-3 flex justify-center items-center bg-slate-400 rounded-lg "
