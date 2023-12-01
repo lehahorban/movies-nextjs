@@ -25,7 +25,7 @@ const ActorsList = ({ id }: { id: number }) => {
   return (
     <div className="flex flex-col overflow-hidden">
       <h3 className="text-white text-lg font-medium mb-2">Actors</h3>
-      <div className="mx-auto max-w-xs xs:max-w-lg xl:max-w-md">
+      <div className="mx-auto max-w-[270px] xs:max-w-lg xl:max-w-md">
         <Slider>
           {data &&
             data?.map((actors: ActorData) => (

@@ -17,8 +17,8 @@ const ActorsCard = ({ id, name, character, profile_path }: ActorData) => {
             : "/actor-unknown.jpg"
         }
         alt={name}
-        width={110}
-        height={150}
+        width={120}
+        height={160}
       />
       <p className="text-teal-500 text-sm font-medium text-center ">{name}</p>
       <p className="text-white text-xs font-medium text-center ">{character}</p>
