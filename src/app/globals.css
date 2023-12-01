@@ -6,6 +6,10 @@ li {
   list-style: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   position: relative;
   display: flex;
@@ -17,6 +21,17 @@ body {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 10px;
+}
+
+.mowies-wrapp {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+@media (max-width: 768px) {
+  .mowies-wrapp {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {

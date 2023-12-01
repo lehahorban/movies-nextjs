@@ -20,7 +20,7 @@ export const getTrandingsMovies = async (
   }
 };
 
-export const getTrandingsMoviesById = async (id: number) => {
+export const getMoviesById = async (id: number) => {
   try {
     const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
     const options = {
@@ -91,6 +91,25 @@ export const getMovieGenres = async () => {
     const response = await fetch(url, options);
     const data = await response.json();
     return data.genres;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getMovieActors = async (id: number) => {
+  try {
+    const url = `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`;
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+      },
+    };
+
+    const response = await fetch(url, options);
+    const data = await response.json();
+    return data.cast.slice(0, 6);
   } catch (error) {
     console.log(error);
   }
