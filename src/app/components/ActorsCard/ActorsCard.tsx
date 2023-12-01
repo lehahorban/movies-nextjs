@@ -8,25 +8,20 @@ interface ActorData {
 
 const ActorsCard = ({ id, name, character, profile_path }: ActorData) => {
   return (
-    <div key={id} className="flex flex-col cursor-pointer">
-      <div className="relative h-36 rounded-xl overflow-hidden">
-        <Image
-          className="object-cover object-center"
-          src={
-            profile_path
-              ? `https://image.tmdb.org/t/p/w500${profile_path}`
-              : "/actor-unknown.jpg"
-          }
-          alt={name}
-          fill={true}
-        />
-      </div>
-      <p className="text-teal-500 text-sm font-medium text-center xl:text-left">
-        {name}
-      </p>
-      <p className="text-white text-xs font-medium text-center xl:text-left">
-        {character}
-      </p>
+    <div key={id} className="flex flex-col items-center cursor-pointer">
+      <Image
+        className="rounded-xl"
+        src={
+          profile_path
+            ? `https://image.tmdb.org/t/p/w500${profile_path}`
+            : "/actor-unknown.jpg"
+        }
+        alt={name}
+        width={110}
+        height={150}
+      />
+      <p className="text-teal-500 text-sm font-medium text-center ">{name}</p>
+      <p className="text-white text-xs font-medium text-center ">{character}</p>
     </div>
   );
 };
