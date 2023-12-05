@@ -21,7 +21,6 @@ const ActorsList = ({ id }: { id: number }) => {
     });
   }, [id]);
 
-  console.log(data);
   return (
     <div className="flex flex-col overflow-hidden">
       <h3 className="text-white text-lg font-medium mb-2">Actors</h3>
