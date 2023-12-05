@@ -20,6 +20,7 @@ const ActorsList = ({ id }: { id: number }) => {
       setData(data);
     });
   }, [id]);
+  console.log(data);
 
   return (
     <div className="flex flex-col overflow-hidden">
